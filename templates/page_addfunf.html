@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fanfics Lite</title>
+</head>
+<body>
+    <center>
+        <h1>Создайте новый фанфик!</h1>
+        <form action="/category/{{ category_id }}/add" method="post">
+            <p></p>
+            <b><label>Название:</label></b>
+            <br><input name="title" type="text" />
+            <p></p>
+            <br><textarea name="text" placeholder="Текст"></textarea>
+            <p></p>
+            <button>Создать</button>
+        </form>
+    </center>
+</body>
+</html>

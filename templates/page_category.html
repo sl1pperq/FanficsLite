@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fanfics Lite</title>
+</head>
+<body>
+    <center>
+        <h1>{{ topic['name'] }}</h1>
+        {% for fanf in topic['fanfics'] %}
+            <b>{{ fanf['name'] }}</b>
+            <br>{{ fanf['text'] }}
+            <i>
+                <br>Лайки: {{ fanf['likes'] }}
+            </i>
+            <br><a href="/category/{{ category_id }}/fanfic/{{ loop.index0 }}/like">Поставить лайк</a>
+            <a href="/category/{{ category_id }}/fanfic/{{ loop.index0 }}/del">Удалить</a>
+            <a href="/category/{{ category_id }}/fanfic/{{ loop.index0 }}/edit">Изменить</a>
+            <p></p>
+        {% endfor %}
+        <p></p>
+        <a href="/category/{{ category_id }}/add">Добавить фанфик</a>
+        <br><a href="/category/{{ category_id }}/del">Удалить категорию</a>
+        <br><a href="/category/{{ category_id }}/edit">Изменить название</a>
+        <br><a href="/">На главную</a>
+    </center>
+</body>
+</html>

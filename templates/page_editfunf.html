@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fanfics Lite</title>
+</head>
+<body>
+    <center>
+        <h1>Измените фанфик</h1>
+        <form action="/category/{{ category_id }}/fanfic/{{ fanfic_id }}/edit" method="post">
+            <b><label>Название:</label></b>
+            <p class="center"><input name="title" type="text" value="{{ topic['name'] }}" /></p>
+            <b><label>Текст:</label></b>
+            <p class="center"><textarea name="text" placeholder="Текст">{{ topic['text'] }}</textarea></p>
+            <p></p>
+        <button>Изменить</button></form>
+    </center>
+</body>
+</html>
